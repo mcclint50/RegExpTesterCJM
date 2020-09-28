@@ -1,0 +1,71 @@
+<!--
+    Author: Colin McClintic
+    Class: Software Engineering
+    Project: Lab 2 / Course Syllabus
+    Description: This is the first version of my RegExp Tester and is being used in Lab 2.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>RegExp Tester</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    /* Style the body*/
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    /* Style the content */
+    .content {
+      background-color: #ddd;
+      padding: 10px;
+    }
+    
+    /* Style the footer */
+    .footer {
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
+</style>
+
+<script>
+    /* JavaScript function to check if its the RegExp */
+    function CheckRegExp() {
+      const regEx = RegExp(document.getElementById("regEx").value);
+      const str = document.getElementById("test").value;
+      document.getElementById("results").value = regEx.test(str);
+    }
+</script>
+</head>
+<body>
+    
+    <div class="content">
+      <h2>RegExp Tester</h2>
+      <p>Enter an expression and its equivalent regular expression
+      <br>
+      Regular Expression: <input id="regEx" type="text" value=" " size="20">
+      <br>
+      Test Phrase: <input id="test" type="text" value=" " size="20">
+      <br>
+      <button type="button" onclick="CheckRegExp()">Check Phrase</button>
+      <br>
+      <br>
+      Results:<input id="results" type="text" value="" size="5">
+      <br>
+      </p>
+    </div>
+    
+    <div class="footer">
+      <p>Footer</p>
+    </div>
+    
+    </body>
+    </html>
+</head>
